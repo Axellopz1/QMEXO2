@@ -1,10 +1,7 @@
 import os
-<<<<<<< HEAD
 
 import pandas as pd
 
-=======
->>>>>>> QMEXO2/master
 from constants import CONFIG_FILE
 from helpers.helpers_serialize import get_serialized_data
 
@@ -15,7 +12,6 @@ class Repository:
         self._repository_full_path = os.path.dirname(__file__)
         config_full_path = os.path.join(os.path.dirname(__file__), CONFIG_FILE)
         print(f"config_full_path={config_full_path}")
-<<<<<<< HEAD
         self.config = get_serialized_data(config_full_path)
 
         self.portfolio_file_path = os.path.join(
@@ -51,6 +47,3 @@ class Repository:
         print(f"portfolio shape={self.portfolio.shape}")
         self.asset_prices = self.portfolio.loc[self.begin_date : self.end_date]
         print(f"asset_prices shape={self.asset_prices.shape}")
-=======
-        config = get_serialized_data(config_full_path)
->>>>>>> QMEXO2/master
